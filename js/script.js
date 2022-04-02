@@ -4,11 +4,11 @@ function show(self){
   $(".fuck-nav").removeClass("active");
   $(self).toggleClass("active");
   $("#root .base-card").remove();
-  $.getJSON(`../data/${i}.json`,function(data){
+  $.getJSON(`https://fiandev.github.io/base-coc/data/${i}.json`,function(data){
     data.title.forEach((d,i) => {
       let title = d.toLowerCase();
       let image = data.thumbnail[i].split("https://cocbases.com/wp-content/uploads/").join("");
-      let thumbnail = `./res/${image}`;
+      let thumbnail = `https://fiandev.github.io/base-coc/res/${image}`;
       let link = data.link[i];
       let newlink = link;
       $("#root").append(`<div class="base-card clearfix">
